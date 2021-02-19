@@ -1,0 +1,28 @@
+securitysdk.log
+target/
+!.mvn/wrapper/maven-wrapper.jar
+.svn
+
+i18n-cache
+
+### STS ###
+.sts4-cache
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+logs/
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
