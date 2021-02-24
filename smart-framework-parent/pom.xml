@@ -17,16 +17,13 @@
     <name>uushang smart parent</name>
 
     <properties>
-        <!-- Spring Versions -->
         <springframework.boot.version>2.0.6.RELEASE</springframework.boot.version>
         <springframework.cloud.version>Finchley.SR3</springframework.cloud.version>
         <spring-cloud-alibaba.version>2.0.0.RELEASE</spring-cloud-alibaba.version>
-        
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!-- Spring Cloud -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -34,7 +31,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- Spring Cloud Alibaba -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
