@@ -1,0 +1,52 @@
+server:
+  port: 5008
+
+spring:
+  application:
+    name: ewtp-platform-system
+
+  cloud:
+    nacos:
+      discovery:
+        namespace: 5fd58d0d-53bc-4a2c-bb17-267d5003a2ba
+        server-addr: 172.16.67.74:8848
+        cluster-name: ewtp-platform
+        service: ${spring.application.name}
+        ip: ${spring.cloud.client.ip-address}
+        port: ${server.port}
+
+      config:
+        namespace: 5fd58d0d-53bc-4a2c-bb17-267d5003a2ba
+        server-addr: 172.16.67.74:8848
+        cluster-name: ewtp-platform
+        ext-config[0]:
+          group: ${spring.profiles.active}
+          data-id: datasource-${spring.profiles.active}.yml
+        ext-config[1]:
+          group: ${spring.profiles.active}
+          data-id: jackson-${spring.profiles.active}.yml
+        ext-config[2]:
+          group: ${spring.profiles.active}
+          data-id: mybatis-${spring.profiles.active}.yml
+        ext-config[3]:
+          group: ${spring.profiles.active}
+          data-id: pagehelper-${spring.profiles.active}.yml
+        ext-config[4]:
+          group: ${spring.profiles.active}
+          data-id: transport-${spring.profiles.active}.yml
+          refresh: true
+        ext-config[5]:
+          group: ${spring.profiles.active}
+          data-id: rocketmq-${spring.profiles.active}.yml
+        ext-config[6]:
+          group: ${spring.profiles.active}
+          data-id: rocketmq-queue-${spring.profiles.active}.yml
+        ext-config[7]:
+          group: ${spring.profiles.active}
+          data-id: async-pool-${spring.profiles.active}.yml
+        ext-config[8]:
+          group: ${spring.profiles.active}
+          data-id: system-${spring.profiles.active}.yml
+        ext-config[9]:
+          group: ${spring.profiles.active}
+          data-id: redis-${spring.profiles.active}.yml
