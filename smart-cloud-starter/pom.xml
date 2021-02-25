@@ -10,9 +10,9 @@
         <version>1.0.0</version>
     </parent>
     
-    <artifactId>smart-boot-component</artifactId>
+    <artifactId>smart-cloud-starter</artifactId>
     <packaging>pom</packaging>
-    <name>uushang smart boot component</name>
+    <name>uushang smart cloud component</name>
 
 	<modules>
 	
