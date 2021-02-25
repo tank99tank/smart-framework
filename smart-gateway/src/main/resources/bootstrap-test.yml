@@ -1,0 +1,40 @@
+server:
+  port: 5401
+
+spring:
+  application:
+    name: ewtp-platform-gateway
+
+  cloud: 
+    nacos:
+      discovery:
+        namespace: 645cae0c-cf99-459d-87e1-9a288de8a75a
+        server-addr: 192.168.0.176:8848
+        cluster-name: ewtp-platform
+        service: ${spring.application.name}
+        ip: ${spring.cloud.client.ip-address}
+        port: ${server.port}
+
+      config:
+        namespace: 645cae0c-cf99-459d-87e1-9a288de8a75a
+        server-addr: 192.168.0.176:8848
+        cluster-name: ewtp-platform
+        ext-config[0]:
+          group: gateway
+          data-id: feign-gateway-${spring.profiles.active}.yml
+        ext-config[1]:
+          group: gateway
+          data-id: redis-${spring.profiles.active}.yml
+        ext-config[2]:
+          group: gateway
+          data-id: routes-${spring.profiles.active}.yml
+        ext-config[3]:
+          group: gateway
+          data-id: httpclient-${spring.profiles.active}.yml
+        ext-config[4]:
+          group: gateway
+          data-id: security-${spring.profiles.active}.yml
+          refresh: true
+config:
+  basic:
+    cors-enabled: false
