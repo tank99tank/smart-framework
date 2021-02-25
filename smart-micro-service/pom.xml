@@ -11,20 +11,10 @@
     </parent>
 
     <artifactId>smart-micro-service</artifactId>
-
-    <dependencies>
-        <!-- spring boot -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-logging</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        
-
-    </dependencies>
+    <packaging>pom</packaging>
+	
+	<modules>
+		<module>test-001</module>
+	</modules>
+	
 </project>
