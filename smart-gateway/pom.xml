@@ -56,5 +56,9 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
         </dependency>
+        <dependency>
+        	<groupId>org.uushang</groupId>
+        	<artifactId>smart-oauth-client</artifactId>
+        </dependency>
     </dependencies>
 </project>

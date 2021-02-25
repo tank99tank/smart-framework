@@ -44,6 +44,11 @@
 	    		<artifactId>smart-base-component</artifactId>
 	    		<version>${project.version}</version>
 	    	</dependency>
+	        <dependency>
+	        	<groupId>org.uushang</groupId>
+	        	<artifactId>smart-oauth-client</artifactId>
+	        	<version>${project.version}</version>
+	        </dependency>
 	    	<dependency>
 	    		<groupId>org.uushang</groupId>
 	    		<artifactId>smart-boot-starter</artifactId>

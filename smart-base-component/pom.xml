@@ -23,6 +23,13 @@
     </properties>
 
     <dependencyManagement>
+    	<dependencies>
+	        <dependency>
+	        	<groupId>org.uushang</groupId>
+	        	<artifactId>smart-oauth-client</artifactId>
+	        	<version>${project.version}</version>
+	        </dependency>
+    	</dependencies>
     </dependencyManagement>
 
 </project>
