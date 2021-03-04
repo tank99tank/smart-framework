@@ -6,13 +6,12 @@
 
 	<parent>
         <groupId>org.uushang</groupId>
-        <artifactId>smart-base-component</artifactId>
+        <artifactId>smart-framework-parent</artifactId>
         <version>1.0.0</version>
     </parent>
     
-    <artifactId>smart-token-jwt</artifactId>
+    <artifactId>smart-base-token</artifactId>
     <packaging>jar</packaging>
-    <name>uushang token jwt</name>
 
 	<modules>
 	

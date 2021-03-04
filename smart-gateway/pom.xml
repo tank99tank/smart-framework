@@ -58,7 +58,7 @@
         </dependency>
         <dependency>
         	<groupId>org.uushang</groupId>
-        	<artifactId>smart-oauth-client</artifactId>
+        	<artifactId>smart-base-oauth</artifactId>
         </dependency>
     </dependencies>
 </project>

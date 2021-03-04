@@ -39,14 +39,14 @@
                 <scope>import</scope>
             </dependency>
 	        
-	    	<dependency>
-	    		<groupId>org.uushang</groupId>
-	    		<artifactId>smart-base-component</artifactId>
-	    		<version>${project.version}</version>
-	    	</dependency>
 	        <dependency>
 	        	<groupId>org.uushang</groupId>
-	        	<artifactId>smart-oauth-client</artifactId>
+	        	<artifactId>smart-base-oauth</artifactId>
+	        	<version>${project.version}</version>
+	        </dependency>
+	        <dependency>
+	        	<groupId>org.uushang</groupId>
+	        	<artifactId>smart-base-token</artifactId>
 	        	<version>${project.version}</version>
 	        </dependency>
 	    	<dependency>
