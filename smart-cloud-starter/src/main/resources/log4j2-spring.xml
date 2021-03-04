@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+<Properties>
+    <Property name="baseDir">baseDir</Property>
+    <Property name="pattern">%d %p %c.%M:%L [%t] [system] %m%n</Property>
+
+    <Property name="operationDir">operationDir</Property>
+</Properties>
+<Appenders>
+
+    <Console name="Console">
+        <PatternLayout pattern="${pattern}"/>
+    </Console>
+
+    <RollingFile name="RollingFile" fileName="${baseDir}/system.log"
+                 filePattern="${baseDir}/$${date:yyyy-MM}/system-%d{yyyy-MM-dd}.log.gz">
+        <PatternLayout pattern="${pattern}" />
+        <CronTriggeringPolicy schedule="0 0 0 * * ?"/>
+        <DefaultRolloverStrategy>
+            <Delete basePath="${baseDir}" maxDepth="2">
+                <IfFileName glob="*/system-*.log.gz" />
+                <IfLastModified age="60d" />
+            </Delete>
+        </DefaultRolloverStrategy>
+    </RollingFile>
+
+    <RollingFile name="StatementFile" fileName="${baseDir}/statement/system.log"
+                 filePattern="${baseDir}/$${date:yyyy-MM}/system-%d{yyyy-MM-dd}.log.gz">
+        <PatternLayout pattern="${pattern}" />
+        <CronTriggeringPolicy schedule="0 0 0 * * ?"/>
+        <DefaultRolloverStrategy>
+            <Delete basePath="${baseDir}" maxDepth="2">
+                <IfFileName glob="*/system-*.log.gz" />
+                <IfLastModified age="60d" />
+            </Delete>
+        </DefaultRolloverStrategy>
+    </RollingFile>
+
+    <RollingFile name="OperationFile" fileName="${operationDir}/system.log"
+                 filePattern="${operationDir}/$${date:yyyy-MM}/system-%d{yyyy-MM-dd}.log.gz">
+        <PatternLayout pattern="${pattern}" />
+        <CronTriggeringPolicy schedule="0 0 0 * * ?"/>
+        <DefaultRolloverStrategy>
+            <Delete basePath="${operationDir}" maxDepth="2">
+                <IfFileName glob="*/system-*.log.gz" />
+                <IfLastModified age="30d" />
+            </Delete>
+        </DefaultRolloverStrategy>
+    </RollingFile>
+</Appenders>
+<Loggers>
+    <Root level="INFO">
+        <AppenderRef ref="Console"/>
+        <AppenderRef ref="RollingFile"/>
+    </Root>
+
+    <logger level="DEBUG" name="com.owinfo.ewtp.system.service.dao" additivity="true">
+        <AppenderRef ref="StatementFile"/>
+    </logger>
+
+    <logger level="INFO" name="com.owinfo.ewtp.system" additivity="false">
+        <AppenderRef ref="RollingFile"/>
+        <AppenderRef ref="Console"/>
+    </logger>
+
+    <logger level="INFO" name="com.owinfo.config" additivity="false">
+        <AppenderRef ref="RollingFile"/>
+        <AppenderRef ref="Console"/>
+    </logger>
+
+    <logger level="INFO" name="com.owinfo.ewtp.system.controller">
+        <AppenderRef ref="OperationFile"/>
+    </logger>
+</Loggers>
+</Configuration>

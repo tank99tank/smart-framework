@@ -11,7 +11,7 @@
     </parent>
     
     <artifactId>smart-boot-starter</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <name>uushang smart boot component</name>
 
 	<modules>
