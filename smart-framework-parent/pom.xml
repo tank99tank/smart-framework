@@ -20,6 +20,8 @@
         <springframework.boot.version>2.0.6.RELEASE</springframework.boot.version>
         <springframework.cloud.version>Finchley.SR3</springframework.cloud.version>
         <spring-cloud-alibaba.version>2.0.0.RELEASE</spring-cloud-alibaba.version>
+        
+        <springfox.version>2.10.5</springfox.version>
     </properties>
 
     <dependencyManagement>
@@ -38,7 +40,19 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-	        
+            <!-- 
+            <dependency>
+                <groupId>org.uushang</groupId>
+                <artifactId>smart-dependency-swagger</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+	         -->
+		    <dependency>
+		    	<groupId>org.uushang</groupId>
+		    	<artifactId>smart-dependency-swagger</artifactId>
+		    	<version>${project.version}</version>
+		    	<type>pom</type>
+		    </dependency>
 	        <dependency>
 	        	<groupId>org.uushang</groupId>
 	        	<artifactId>smart-base-oauth</artifactId>
@@ -59,12 +73,25 @@
 	    		<artifactId>smart-cloud-starter</artifactId>
 	    		<version>${project.version}</version>
 	    	</dependency>
+	    	<dependency>
+	    		<groupId>org.uushang</groupId>
+	    		<artifactId>smart-cloud-swagger-gateway-starter</artifactId>
+	    		<version>${project.version}</version>
+	    	</dependency>
+            
             
 	        <dependency>
 	            <groupId>org.springframework.security</groupId>
 	            <artifactId>spring-security-jwt</artifactId>
 	            <version>1.0.8.RELEASE</version>
 	        </dependency>
+	        
+            <!--#### swagger -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
 	        
 	        <dependency>
 	            <groupId>com.alibaba</groupId>
@@ -74,6 +101,4 @@
         </dependencies>
     </dependencyManagement>
 
-    <dependencies>
-    </dependencies>
 </project>

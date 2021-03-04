@@ -12,16 +12,8 @@
     
     <artifactId>smart-cloud-starter</artifactId>
     <packaging>jar</packaging>
-    <name>uushang smart cloud component</name>
 
-	<modules>
-	
-	</modules>
-	
-    <properties>
-    </properties>
-
-    <dependencyManagement>
-    </dependencyManagement>
-
+    <dependencies>
+		    
+    </dependencies>
 </project>

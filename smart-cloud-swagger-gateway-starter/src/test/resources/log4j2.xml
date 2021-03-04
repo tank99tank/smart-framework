@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+<Properties>
+    <Property name="pattern">%d %p %c.%M:%L [%t] %m%n</Property>
+</Properties>
+<Appenders>
+    <Console name="Console">
+        <PatternLayout pattern="${pattern}"/>
+    </Console>
+</Appenders>
+<Loggers>
+    <Root level="WARN">
+        <AppenderRef ref="Console"/>
+    </Root>
+    <logger level="INFO" name="com.owinfo.ewtp.system" additivity="false">
+        <AppenderRef ref="Console"/>
+    </logger>
+    <logger level="DEBUG" name="com.owinfo.ewtp.system.service.dao" additivity="false">
+        <AppenderRef ref="Console"/>
+    </logger>
+</Loggers>
+</Configuration>

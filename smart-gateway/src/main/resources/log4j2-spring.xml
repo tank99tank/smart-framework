@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
 <Properties>
-    <Property name="baseDir">baseDir</Property>
+    <Property name="baseDir">log</Property>
     <Property name="pattern">%d %p %c.%M:%L [%t] %m%n</Property>
 </Properties>
 <Appenders>

@@ -1,7 +1,8 @@
-*.log
+securitysdk.log
 target/
 !.mvn/wrapper/maven-wrapper.jar
 .svn
+log
 
 i18n-cache
 
@@ -18,7 +19,6 @@ i18n-cache
 *.iws
 *.iml
 *.ipr
-logs/
 
 ### NetBeans ###
 nbproject/private/

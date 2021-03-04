@@ -28,7 +28,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
         </dependency>
-        <!-- alibaba -->
+        <!-- 
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
@@ -37,6 +37,7 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
+         -->
         <!-- boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -60,5 +61,11 @@
         	<groupId>org.uushang</groupId>
         	<artifactId>smart-base-oauth</artifactId>
         </dependency>
+        
+    	<dependency>
+    		<groupId>org.uushang</groupId>
+    		<artifactId>smart-cloud-swagger-gateway-starter</artifactId>
+    	</dependency>
+    	
     </dependencies>
 </project>

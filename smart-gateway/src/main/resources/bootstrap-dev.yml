@@ -1,21 +1,21 @@
-server:
-  port: 50000
-
 spring:
-  application:
-    name: smart-gateway
-
   cloud:
-    nacos:
+    gateway:
+      default-filters:
+        - name: StripPrefix
+          args:
+            parts: 1
+        - name: Hystrix
+          args:
+            name: default-gateway-fallback
+            fallbackUri: forward:/fallback
       discovery:
-        namespace: bc0f01cb-1d82-4b37-b72b-198abbb4bc87
-        server-addr: localhost:8848
-        cluster-name: ${spring.application.name}
-        service: ${spring.application.name}
-        ip: ${spring.cloud.client.ip-address}
-        port: ${server.port}
-
-      config:
-        namespace: bc0f01cb-1d82-4b37-b72b-198abbb4bc87
-        server-addr: localhost:8848
-        cluster-name: ${spring.application.name}
+        locator:
+          enabled: false
+          lower-case-service-id: true
+      routes:
+      #service
+      - id: smart-micro-service
+        uri: http://localhost:60000
+        predicates:
+        - Path=/service/**
