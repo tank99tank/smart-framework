@@ -9,14 +9,14 @@ import org.springframework.web.server.ServerWebExchange;
 
 @Component
 @SuppressWarnings("rawtypes")
-public class SwaggerHeaderFilter extends AbstractGatewayFilterFactory {
+public class SwaggerResourcesFilter extends AbstractGatewayFilterFactory {
 
     @Override
     public GatewayFilter apply(Object config) {
         return (exchange, chain) -> {
             ServerHttpRequest request = exchange.getRequest();
             String path = request.getURI().getPath();
-            if (!StringUtils.endsWithIgnoreCase(path, SwaggerConfig.SWAGGER2URL)) {
+            if (!StringUtils.endsWithIgnoreCase(path, SwaggerGagewayConfig.SWAGGER2URL)) {
                 return chain.filter(exchange);
             }
             ServerHttpRequest newRequest = request.mutate().build();

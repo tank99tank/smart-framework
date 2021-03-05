@@ -6,4 +6,4 @@ spring:
     name: smart-gateway
     
   profiles:
-    active: test
+    active: dev

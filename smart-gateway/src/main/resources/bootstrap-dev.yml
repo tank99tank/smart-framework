@@ -5,10 +5,10 @@ spring:
         - name: StripPrefix
           args:
             parts: 1
-        - name: Hystrix
-          args:
-            name: default-gateway-fallback
-            fallbackUri: forward:/fallback
+#        - name: Hystrix
+#          args:
+#            name: default-gateway-fallback
+#            fallbackUri: forward:/fallback
       discovery:
         locator:
           enabled: false

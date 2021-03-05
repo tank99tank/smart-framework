@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-org.uushang.gateway.swagger.SwaggerConfig
+org.uushang.gateway.swagger.SwaggerGagewayConfig
