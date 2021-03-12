@@ -1,0 +1,21 @@
+server:
+  port: 7076
+
+spring:
+  application:
+    name: smart-eureka-client
+
+  profiles:
+    active: dev
+
+eureka:
+  client:
+    register-with-eureka: true #默认为true，注册到Eureka中
+    fetch-registry: true #默认为true，获取注册列表
+    serviceUrl: 
+      defaultZone: http://localhost:7070/eureka/
+management:
+  endpoint:
+    web:
+      exposure:
+        include: "*"

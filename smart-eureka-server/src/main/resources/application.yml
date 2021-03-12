@@ -1,0 +1,18 @@
+server:
+  port: 7070
+
+spring:
+  application:
+    name: smart-eureka-server
+
+  profiles:
+    active: dev
+
+eureka:
+  server:
+    enable-self-preservation: false #不开启自我保护，将不可用的实例剔除
+  client:
+    register-with-eureka: false #false表示自己就是服务端,不注册到Eureka中
+    fetch-registry: false #false表示自己就是服务端,不拉取服务注册表
+    serviceUrl:
+      defaultZone: http://localhost:${server.port}/eureka/ #覆盖默认的defaultZone
