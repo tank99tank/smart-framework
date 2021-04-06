@@ -1,0 +1,9 @@
+server:
+  port: 60001
+
+spring:
+  application:
+    name: smart-micro-service
+
+  profiles:
+    active: dev
