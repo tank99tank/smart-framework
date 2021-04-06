@@ -25,23 +25,5 @@
         <AppenderRef ref="Console"/>
         <AppenderRef ref="RollingFile"/>
     </Root>
-
-    <logger level="DEBUG" name="com.owinfo.ewtp.system.service.dao" additivity="true">
-        <AppenderRef ref="StatementFile"/>
-    </logger>
-
-    <logger level="INFO" name="com.owinfo.ewtp.system" additivity="false">
-        <AppenderRef ref="RollingFile"/>
-        <AppenderRef ref="Console"/>
-    </logger>
-
-    <logger level="INFO" name="com.owinfo.config" additivity="false">
-        <AppenderRef ref="RollingFile"/>
-        <AppenderRef ref="Console"/>
-    </logger>
-
-    <logger level="INFO" name="com.owinfo.ewtp.system.controller">
-        <AppenderRef ref="OperationFile"/>
-    </logger>
 </Loggers>
 </Configuration>
