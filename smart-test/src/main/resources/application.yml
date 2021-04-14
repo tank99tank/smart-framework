@@ -1,0 +1,9 @@
+server:
+  port: 60005
+
+spring:
+  application:
+    name: smart-vue
+
+  profiles:
+    active: dev
